@@ -131,3 +131,14 @@ syscall.write(output_fd, tgz_size_str as [u8])
 logf('tag_size to output success, size_str=%v', tgz_size_str)
 
 logf('runner %s make successful', path.join(workdir, output_name))
+
+// - 信息输出
+fmt.printf('%s\n', output_name)
+for i, item in sources {
+    if i < sources.len - 1 {
+        fmt.printf('├── %s\n', item)
+    } else {
+        fmt.printf('└── %s\n', item)
+    }
+}
+fmt.printf('🍻 parker successful\n', output_name)
