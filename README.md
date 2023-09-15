@@ -1,6 +1,6 @@
 # Parker
 
-A lightweight packaging tool and container runtime. Pack your working directory into an executable with a single command and run it directly on the target machine in a lightweight container.
+A lightweight tool and runtime to package a directory into an executable and run it as a lightweight container.
 
 It is used for linux systems. Illustration:
 
@@ -12,7 +12,7 @@ Using Parker, compress and package the executable file `ipservice` and its depen
 
 Running `ipserviced` on the target machine will create a lightweight container environment to run the original `ipservice`.
 
-## Installation
+## 💾  Installation
 
 Download and unpack the Parker installation package from [github releases](https://github.com/weiwenhao/parker/releases). It is recommended to move the unpacked `parker` folder to `/usr/local/` and add the `/usr/local/parker/bin` directory to your system's environment variable.
 
@@ -21,7 +21,7 @@ Download and unpack the Parker installation package from [github releases](https
 1.0.1
 ```
 
-## Usage
+## 📦 Usage
 
 Navigate to the working directory and execute `parker target`. This command will package the target along with the current working directory into a new executable named `targetd`. Transfer this executable to the target machine and run.
 
@@ -85,7 +85,7 @@ Now you just need to replace `python` with `pythond`, and no other start-up para
 
 > ❗️ Parker does not address the dynamic library dependencies of python.
 
-## Runtime details
+## 🚢 Runtime details
 
 `pythond` is a lightweight container runtime built by Parker, and it's a statically compiled executable. When executed, it uses the Linux namespace to create an isolated environment, unpacks the working directory, and runs the target `python`.
 
@@ -93,20 +93,20 @@ Now you just need to replace `python` with `pythond`, and no other start-up para
 
 All parameters and signals passed to `pythond` will be passed on to the `python` process unchanged.
 
-## Runtime Dependencies
+## 🐧 Runtime Dependencies
 
 The container runtime depends on `cgroup` and `namespace`, requiring a Linux kernel version greater than 2.6.24. Ensure that `cgroup` is correctly mounted. Check for the existence of either the `/sys/fs/cgroup/cgroup.controllers` file or the `/sys/fs/cgroup/freezer` directory.
 
 Tested environments: ubuntu:22 / ubuntu:20
 
-## Make build
+## 🛠️ Make build
 
 The source code is developed in the programming language [nature](https://github.com/nature-lang/nature). You'll need the `nature` compiler version >= 0.4.0. After installation, execute `make amd64 && make install` in the source directory to install to the `/usr/local/parker` directory.
 
 
 > `nature` primarily supports amd64 builds. Executables built with `nature` are more compact and efficient. For other architectures, the main repository provides a Golang implementation.
 
-## Thinks
+## 🎉 Thinks
 
 [nature](https://github.com/nature-lang/nature) is the next-generation system-level programming language, destined to work alongside C for high-performance and efficient development.
 
@@ -114,7 +114,7 @@ The `nature` community version will be released soon. You can try it out now and
 
 Join the `nature` programming language group by adding the WeChat ID `nature-lang`.
 
-## License
+## 🪶 License
 
 This project is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
