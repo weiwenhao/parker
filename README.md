@@ -4,7 +4,7 @@ A lightweight tool and runtime to package a directory into an executable and run
 
 It is used for linux systems. Illustration:
 
-![Illustration](https://raw.githubusercontent.com/weiwenhao/pictures/main/blogs20230915104318.png)
+![](https://raw.githubusercontent.com/weiwenhao/pictures/main/blogs20230915112230.png)
 
 The example is a C language-based IP parsing service `gcc -o ipservice`, which relies on the ipdb resource file.
 

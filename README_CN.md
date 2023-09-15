@@ -5,7 +5,7 @@
 
 适用于 linux 系统，示例图
 
-![](https://raw.githubusercontent.com/weiwenhao/pictures/main/blogs20230915104318.png)
+![](https://raw.githubusercontent.com/weiwenhao/pictures/main/blogs20230915112230.png)
 
 示例是一个 c 语言编写的 ip 解析服务 `gcc -o ipservice`，其依赖 ipdb 资源文件。
 
@@ -13,7 +13,7 @@
 
 在目标机器上运行 ipserviced 将会生成一个轻量的容器环境来运行原始的 ipservice 服务。
 
-## 💾 安装
+## ⚙️ 安装
 
 从 [github releases](https://github.com/weiwenhao/parker/releases) 中下载并解压 Parker 安装包。推荐将解压后的 parker 文件夹移动到 `/usr/local/` 下，并将 `/usr/local/parker/bin` 目录加入到系统环境变量。
 
