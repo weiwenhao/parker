@@ -112,8 +112,6 @@ The source code is developed in the programming language [nature](https://github
 
 The `nature` community version will be released soon. You can try it out now and provide feedback. We invite you to contribute to the standard library, and all contributions will be merged into the main repository.
 
-Join the `nature` programming language group by adding the WeChat ID `nature-lang`.
-
 ## 🪶 License
 
 This project is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
