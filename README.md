@@ -57,7 +57,7 @@ def run():
 run()
 ```
 
-Navigate to the working directory and execute `parser python`. You'll get a `pythond` file, which is the packaged executable. Transfer it to the target machine and run.
+Navigate to the working directory and execute `parker python`. You'll get a `pythond` file, which is the packaged executable. Transfer it to the target machine and run.
 
 ```
 ------------------------------------------------------------------------ Stage 1
