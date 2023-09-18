@@ -59,26 +59,26 @@ run()
 
 Navigate to the working directory and execute `parker python`. You'll get a `pythond` file, which is the packaged executable. Transfer it to the target machine and run.
 
-```
------------------------------------------------------------------------- Stage 1
+```bash
+> parker python
+pythond
+├── server.py
+├── python
+├── foo.txt
+└── bar.png
+🍻 parker successful
+
+------------------------------------------------------------------------ move pyhond to target
 > tree .
 .
 └── pythond
 
-0 directories, 1 file 
+0 directories, 1 file
 
------------------------------------------------------------------------- Stage 2
+------------------------------------------------------------------------ run pythond
 > ./pythond server.py
 listen on http://127.0.0.1:8000
 
------------------------------------------------------------------------- Stage 3
-> curl 127.0.0.1:8000
-...
-<li><a href="bar.png">bar.png</a></li>
-<li><a href="foo.txt">foo.txt</a></li>
-<li><a href="python">python</a></li>
-<li><a href="server.py">server.py</a></li>
-...
 ```
 
 Now you just need to replace `python` with `pythond`, and no other start-up parameters need to change. `pythond` will pass the parameters to the `python` process.
