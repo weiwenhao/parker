@@ -1,6 +1,6 @@
 # Parker
 
-A lightweight tool and runtime to package a directory into an executable and run it as a lightweight container.
+Lightweight packaging tool and container runtime, a single command packages the working directory into an executable file.
 
 ![](https://raw.githubusercontent.com/weiwenhao/pictures/main/blogs20230920174445.png)
 
