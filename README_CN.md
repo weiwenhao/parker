@@ -1,6 +1,6 @@
 # Parker
 
-轻量级打包工具与容器运行时，一条指令将工作目录打包成可执行文件，并以轻量级容器的方式直接运行在目标机器上。
+轻量级打包工具与容器运行时，一条命令将工作目录打包成可执行文件，并以轻量级容器的方式直接运行在目标机器上。
 
 ![](https://raw.githubusercontent.com/weiwenhao/pictures/main/blogs20230920174445.png)
 
@@ -8,7 +8,7 @@
 
 使用 parker 将可执行文件 ipservice 和其依赖的 assert 压缩并打包成新的可执行文件 ipservice-c。
 
-在目标机器上运行 ipservice-c 将会生成一个轻量的容器环境来运行原始的 ipservice 服务。
+在目标机器上运行 ipservice-c 将会生成一个轻量的容器环境来运行原始的 ipservice 服务和其关联的资源文件。
 
 ## ⚙️ 安装
 
