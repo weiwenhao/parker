@@ -30,6 +30,7 @@ package:
 	@echo "Packaging..."
 	@test "$(ARCH)" || (echo "Error: ARCH is not set. Please set it like 'make package ARCH=amd64'" && exit 1)
 	$(eval VERSION=$(shell cat VERSION))
+	mkdir -p releases
 	cd build && tar -czvf parker-$(VERSION)-linux-$(ARCH).tar.gz parker
 	mv build/parker-$(VERSION)-linux-$(ARCH).tar.gz releases/
 	@echo "Packaging done."
