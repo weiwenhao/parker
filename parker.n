@@ -51,7 +51,7 @@ syscall.close(target_name_fd)
 var tgz_name = fmt.sprintf('%v.tar.gz', target_name)
 
 // new target_name + 'd' fd, node -> noded
-var output_name = fmt.sprintf('%vd', target_name)
+var output_name = fmt.sprintf('%v-c', target_name)
 
 // - 遍历当前工作目录中的所有文件，进行压缩
 var sources = os.listdir(workdir)
@@ -135,10 +135,14 @@ logf('runner %s make successful', path.join(workdir, output_name))
 // - 信息输出
 fmt.printf('%s\n', output_name)
 for i, item in sources {
+    if item == '.target_name' {
+        continue
+    }
+
     if i < sources.len - 1 {
         fmt.printf('├── %s\n', item)
     } else {
         fmt.printf('└── %s\n', item)
     }
 }
-fmt.printf('🍻 parker successful\n', output_name)
+fmt.printf('🍻 parker successful\n')

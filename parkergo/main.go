@@ -34,8 +34,8 @@ func main() {
 	targetName = path.Base(targetPath)
 	helper.Logf("new workdir: %v, target name: %v", workdir, targetName)
 
-    err = os.WriteFile(".target_name", []byte(targetName), 0755)
-    helper.Assertf(err == nil, "Error writing to .target_name: %v", err)
+	err = os.WriteFile(".target_name", []byte(targetName), 0755)
+	helper.Assertf(err == nil, "Error writing to .target_name: %v", err)
 
 	if _, err := os.Stat(targetPath); os.IsNotExist(err) {
 		helper.Assertf(false, "file=%v notfound", targetPath)
@@ -43,7 +43,7 @@ func main() {
 	helper.Logf("target_path: %v found", targetPath)
 
 	tgzName := fmt.Sprintf("%v.tar.gz", targetName)
-	outputName := fmt.Sprintf("%vd", targetName)
+	outputName := fmt.Sprintf("%v-c", targetName)
 
 	files, err := os.ReadDir(workdir)
 	helper.Assertf(err == nil, "Error reading directory: %v", err)
@@ -55,8 +55,6 @@ func main() {
 			sources = append(sources, name)
 		}
 	}
-
-
 
 	err = tarGzFile(workdir, tgzName, sources)
 	helper.Assertf(err == nil, "Error creating tar.gz file: %v", err)
@@ -90,6 +88,10 @@ func main() {
 	os.Remove(".target_name")
 
 	helper.Logf("runner %s make successful", filepath.Join(workdir, outputName))
+
+	// - 信息输出
+	fmt.Printf("%s\n", outputName)
+	fmt.Printf("🍻 parker successful\n")
 }
 
 func appendFileTo(dst *os.File, srcPath string) error {
