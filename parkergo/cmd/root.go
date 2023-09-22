@@ -2,10 +2,11 @@ package cmd
 
 import (
 	"fmt"
-	"github.com/spf13/cobra"
 	"os"
 	"os/signal"
 	"rungo/src"
+
+	"github.com/spf13/cobra"
 )
 
 func init() {
@@ -15,7 +16,7 @@ func init() {
 }
 
 const (
-	Version = "0.1.0"
+	Version = "0.1.1"
 )
 
 var exampleCmd = &cobra.Command{
