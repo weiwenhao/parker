@@ -7,7 +7,7 @@ import parker.cgroup
 import compress.tgz
 import libc_temp
 
-var version = '0.1.0'
+var version = '0.1.1'
 
 if util.arg_verbose() {
     tgz.verbose = true
@@ -76,14 +76,13 @@ for true {
 
     } else {
         // 暂时不用处理
-        // if err.msg == 'Resource temporarily unavailable' {
+        if err.msg == 'Resource temporarily unavailable' {
             // logf('not received any sig, will sleep')
-        // } else {
-        //    assertf(false, 'read sigfd %d err=%s', sigfd, err.msg)
-        //}   
+        } else {
+            assertf(false, 'read sigfd %d err=%s', sigfd, err.msg)
+        }   
     }
 
-    // usleep(50000)
     sleep(1)
 
     // logf('usleep 50ms, will next for')
