@@ -2,7 +2,8 @@
 
 Lightweight packaging tool and container runtime, a single command packages the working directory into an executable file.
 
-![](https://raw.githubusercontent.com/weiwenhao/pictures/main/blogs20230920174445.png)
+![](https://raw.githubusercontent.com/weiwenhao/pictures/main/blogs20230922113619.png)
+
 
 The example demonstrates a C language-based IP resolution service (`gcc -o ipservice`), dependent on the ipdb resource file.
 
