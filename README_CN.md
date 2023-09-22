@@ -2,7 +2,7 @@
 
 轻量级打包工具与容器运行时，一条命令将工作目录打包成可执行文件，并以轻量级容器的方式直接运行在目标机器上。
 
-![](https://raw.githubusercontent.com/weiwenhao/pictures/main/blogs20230920174445.png)
+![](https://raw.githubusercontent.com/weiwenhao/pictures/main/blogs20230922113619.png)
 
 示例是一个 c 语言编写的 ip 解析服务 `gcc -o ipservice`，其依赖 ipdb 资源文件。
 
