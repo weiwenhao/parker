@@ -64,6 +64,17 @@ python-c
 ├── foo.txt
 └── bar.png
 🍻 parker successful
+
+------------------------------------------------------------------------ move pyhon-c to target
+> tree .
+.
+└── python-c
+
+0 directories, 1 file
+
+------------------------------------------------------------------------ run python-c
+> ./python-c server.py
+listen on http://127.0.0.1:8000
 ```
 
 Here, `python-c` passes arguments to the python process.
