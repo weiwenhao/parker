@@ -128,6 +128,7 @@ fn run_target(cgroup.cgroup_t cg, string target_path):int {
     return 0 // 正常不会执行到这里了
 }
 
+// TODO 多线程模式中无法实现
 // 创建一个能够拦截所有信号且非阻塞的 fd
 fn sig_notify():int {
     var mask_ptr = new sigset_t // ptr<sigset_t>

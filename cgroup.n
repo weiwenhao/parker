@@ -27,8 +27,7 @@ type cgroup_t = struct {
     var clear = fn(self s) {
         logf('s.procs_path is "%s"', s.procs_path)
 
-        var (fd, err) = try syscall.open(s.procs_path, syscall.O_RDONLY, 0)
-        if err.has {
+        var fd = syscall.open(s.procs_path, syscall.O_RDONLY, 0) catch err {
             throw fmt.sprintf('open procs path="%s" failed: %s', s.procs_path, err.msg)
         }
         var stat = syscall.fstat(fd)
@@ -48,8 +47,7 @@ type cgroup_t = struct {
                 }
                 
                 // kill by pid
-                var err = try syscall.kill(pid, syscall.SIGKILL)
-                if err.has {
+                syscall.kill(pid, syscall.SIGKILL) catch err {
                     logf('kill pid %d failed %s', pid, err.msg)
                 }
             }
